@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BBC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="/page/-/wrapper/styles/normalize.css">
+    <link rel="stylesheet" href="/page/-/wrapper/styles/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/page/-/wrapper/scripts/source.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("https://savethebbc.bsd.net/page/sf/4tk2rx7sbzcgwdy2cchbw2r9vvk8qjpb");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = jQuery("#feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            if(i >=6 ) {
+              break;
+            }
+            var entry = result.feed.entries[i];
+            var string = "<div class='circle-entry clearfix'>"
+                        +"<div class='color-circle'><span class='ir'></span></div>"
+                        +"</div>"
+            container.append(string);
+            var circle = jQuery('.circle-entry:last-of-type');
+            circle.append("<h6>"+entry.title+"</h6>");
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
+  </head>
+  <body>
+
+    <!-- Add your site or application content here -->
+    <div class="content-wrapper clearfix">
+
+
+
+
+
+<div class="column col-1">
+  <h1 class="bbc-logo"><span class="ir">#BackTheBBC</span></h1>
+  <h2>The BBC belongs to all of us.</h2>
+  <h5>Join the grassroots campaign fighting to protect it! <a href="/more">Find out more.</a></h5>
+  <form action="/page/s/" method="POST">
+    <input type="text" name="firstname" data-h5-errorid="invalid-name" placeholder="first name" required>
+    <input type="text" name="lastname" data-h5-errorid="invalid-name" placeholder="last name" required>
+    <input type="email" name="email" class="h5-email" data-h5-errorid="invalid-email" placeholder="email address" required>
+    <input type="submit" name="submit" value="#BackTheBBC">
+  </form>
+</div>
+<div class="column col-2 clearfix">
+  <h2>Dear David Cameron,</h2>
+  <p><em>&ldquo;We, the undersigned are writing to place on record at the very start of the process our concern that nothing should be done to diminish the BBC or turn it into a narrowly focused market-failure broadcaster. In our view, a diminished BBC would simply mean a diminished Britain.&rdquo;</em></p>
+  <h5><a href="/more">Read the full letter</a></h5>
+  <div class="signers-wrapper">
+    <div class="circle-entry clearfix">
+      <div class="celeb-circle celeb-circle--attenborough"><div class="ir"></div></div>
+      <h6>David Attenborough</h6>
+    </div> <!-- /.circle-entry -->
+
+    <div class="circle-entry clearfix">
+      <div class="celeb-circle celeb-circle--winkleman"><div class="ir"></div></div>
+      <h6>Claudia Winkleman</h6>
+    </div> <!-- /.circle-entry -->
+
+    <div class="circle-entry clearfix">
+      <div class="celeb-circle celeb-circle--rowling"><div class="ir"></div></div>
+      <h6>JK Rowling</h6>
+    </div> <!-- /.circle-entry -->
+
+    <div class="circle-entry clearfix">
+      <div class="celeb-circle celeb-circle--fry"><div class="ir"></div></div>
+      <h6>Stephen Fry</h6>
+    </div> <!-- /.circle-entry -->
+
+    <div class="circle-entry clearfix">
+      <div class="celeb-circle celeb-circle--craig"><div class="ir"></div></div>
+      <h6>Daniel Craig</h6>
+    </div> <!-- /.circle-entry -->
+
+    <div class="circle-entry clearfix">
+      <div class="celeb-circle celeb-circle--dench"><div class="ir"></div></div>
+      <h6>Judi Dench</h6>
+    </div> <!-- /.circle-entry -->
+    <div class="user-entries" id="feed">
+      <div class="circle-entry clearfix">
+        <div class="color-circle"><div class="ir"></div></div>
+        <h6>Judi Dench</h6>
+      </div> <!-- /.circle-entry -->
+
+      <div class="circle-entry clearfix">
+        <div class="color-circle"><div class="ir"></div></div>
+        <h6>Judi Dench</h6>
+      </div> <!-- /.circle-entry -->
+
+      <div class="circle-entry clearfix">
+        <div class="color-circle"><div class="ir"></div></div>
+        <h6>Judi Dench</h6>
+      </div> <!-- /.circle-entry -->
+
+      <div class="circle-entry clearfix">
+        <div class="color-circle"><div class="ir"></div></div>
+        <h6>Judi Dench</h6>
+      </div> <!-- /.circle-entry -->
+      <div class="circle-entry clearfix">
+        <div class="color-circle"><div class="ir"></div></div>
+        <h6>Judi Dench</h6>
+      </div> <!-- /.circle-entry -->
+
+      <div class="circle-entry clearfix">
+        <div class="color-circle"><div class="ir"></div></div>
+        <h6>Judi Dench</h6>
+      </div> <!-- /.circle-entry -->
+
+      <div class="circle-entry clearfix">
+        <div class="color-circle"><div class="ir"></div></div>
+        <h6>Judi Dench</h6>
+      </div> <!-- /.circle-entry -->
+
+      <div class="circle-entry clearfix">
+        <div class="color-circle"><div class="ir"></div></div>
+        <h6>Judi Dench</h6>
+      </div> <!-- /.circle-entry -->
+
+    </div>
+  </div> <!-- /.signers-wrapper -->
+</div> <!-- /.col-2 -->
+
+
+    </div>
+    <footer>
+      <div class="content-wrapper">
+        <h5>
+          <a href="/share">Share #BackTheBBC</a>
+        </h5>
+      </div>
+    </footer>
+  <script src="/page/-/wrapper/scripts/main.js"></script>
+  </body>
+</html>
