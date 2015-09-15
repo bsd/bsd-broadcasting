@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BBC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="/page/-/wrapper/styles/normalize.css">
+    <link rel="stylesheet" href="/page/-/wrapper/styles/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/page/-/wrapper/scripts/source.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("https://savethebbc.bsd.net/page/sf/4tk2rx7sbzcgwdy2cchbw2r9vvk8qjpb");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = jQuery("#feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            if(i >=6 ) {
+              break;
+            }
+            var entry = result.feed.entries[i];
+            var string = "<div class='circle-entry clearfix'>"
+                        +"<div class='color-circle'><span class='ir'></span></div>"
+                        +"</div>"
+            container.append(string);
+            var circle = jQuery('.circle-entry:last-of-type');
+            circle.append("<h6>"+entry.title+"</h6>");
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
+  </head>
+  <body>
+
+    <!-- Add your site or application content here -->
+    <div class="content-wrapper clearfix">
+
+
+
+
+
+<div class="thank-you">
+  <div class="thank-you__content">
+    <h2>Thanks for joining the campaign!</h2>
+    <p>We'll be in touch to tell you how you can help to #BackTheBBC and protect it for generations to come. First, help us spread the word by sharing this page.</p>
+    <img src="/page/-/wrapper/images/BSD_BBC_Share_FB_ktc1.png" alt="#BackTheBBC">
+    <a href="" class="button button--share facebook" data-share="https://savethebbc.bsd.net/page/content/bbc-belongs/">Share on Facebook</a>
+  </div>
+</div>
+
+
+    </div>
+    <footer>
+      <div class="content-wrapper">
+        <h5>
+          <a href="/share">Share #BackTheBBC</a>
+        </h5>
+      </div>
+    </footer>
+    <script src="/page/-/wrapper/scripts/main.js"></script>
+  </body>
+</html>
